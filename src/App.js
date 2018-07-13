@@ -38,7 +38,7 @@ class App extends PureComponent {
           </div>
           <div className="App-row">
             <CopyToClipboard text={result} onCopy={this.resetState}>
-              <Button large={true}>Copy</Button>
+              <Button large={true} disabled={!result}>Copy</Button>
             </CopyToClipboard>
           </div>
           <div className="App-row">
@@ -59,7 +59,7 @@ class App extends PureComponent {
 
   static getDerivedStateFromProps(props, state) {
     const { password, key } = state;
-    if (!password || !key) {
+    if (!password) {
       return {
         hint: "",
         result: "",
@@ -68,7 +68,7 @@ class App extends PureComponent {
 
     return {
       hint: window.genpass(password, "foo").substr(0, 6),
-      result: window.genpass(password, key),
+      result: !key ? "" : window.genpass(password, key),
     };
   }
 
