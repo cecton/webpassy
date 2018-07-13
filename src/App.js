@@ -30,18 +30,18 @@ class App extends PureComponent {
           <img src={logo} className="App-logo" alt="logo" />
         </header>
         <div className="App-content">
-          <div className="App-row">
+          <div className="App-element">
             <InputGroup large={true} type="password" placeholder="password" value={password} onChange={this.handlePasswordChange} />
           </div>
-          <div className="App-row">
+          <div className="App-element">
             <InputGroup large={true} placeholder="key" value={key} onChange={this.handleKeyChange} />
           </div>
-          <div className="App-row">
+          <div className="App-element">
             <CopyToClipboard text={result} onCopy={this.resetState}>
               <Button large={true} disabled={!result}>Copy</Button>
             </CopyToClipboard>
           </div>
-          <div className="App-row">
+          <div className="App-element">
             {hint}
           </div>
         </div>

@@ -7,11 +7,13 @@ body {
 }
 
 .App-content {
-  padding: 20pt;
+  padding: 15pt;
 }
 
-.App-row {
-  padding: 5pt 0;
+.App-element {
+  padding: 5pt 5pt;
+  max-width: 400px;
+  display: inline-block;
 }
 
 .App-logo {
