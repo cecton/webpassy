@@ -7,14 +7,20 @@ body {
 }
 
 .App-content {
+  margin: auto;
+  max-width: 400px;
   padding: 15pt;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
 }
 
 .App-element {
   padding: 5pt 5pt;
   max-width: 400px;
   min-width: 80px;
-  display: inline-block;
+  flex-grow: 1;
+  flex-basis: 400px;
 }
 
 .App-logo {
