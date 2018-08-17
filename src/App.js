@@ -10,6 +10,8 @@ import { InputGroup, Button } from '@blueprintjs/core';
 import logo from './logo.svg';
 import './App.css';
 
+import { make_hint, make_password } from './webpassy';
+
 class App extends PureComponent {
   constructor(props) {
     super(props);
@@ -67,8 +69,8 @@ class App extends PureComponent {
     }
 
     return {
-      hint: window.genpass(password, "foo").substr(0, 6),
-      result: !key ? "" : window.genpass(password, key),
+      hint: make_hint(password),
+      result: !key ? "" : make_password(password, key),
     };
   }
 
